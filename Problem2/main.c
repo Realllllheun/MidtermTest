@@ -1,4 +1,4 @@
-﻿#include <windows.h>  // 콘솔 관련 구조체 사용을 위한 헤더
+#include <windows.h>  // 콘솔 관련 구조체 사용을 위한 헤더
 #include <stdio.h>    // printf 사용을 위한 헤더
 
 // 커서 이동 함수 (ANSI)
@@ -169,6 +169,7 @@ void MousePos(int backgroundWidth, int backgroundHeight)
     SetConsoleCursorInfo(hConsole, &cursorInfo);
 }
 
+
 int main()
 {
     // 배경 크기 설정
@@ -182,7 +183,10 @@ int main()
     SetConsoleMode(hConsole, dwMode | ENABLE_VIRTUAL_TERMINAL_PROCESSING);
 
     BackGroundColor();
-    drawConsoleWindow(10, 5, 30, 8, "Hello Box", 6);
+    // 창 3개 출력
+    drawConsoleWindow(5, 2, 30, 10, "나의 멋진 윈도우", 1;  // 파란 배경
+    drawConsoleWindow(20, 8, 30, 10, "나의 멋진 윈도우", 2); // 초록 배경
+    drawConsoleWindow(35, 14, 30, 10, "나의 멋진 윈도우", 4); // 노란 배경
     MousePos(backgroundWidth, backgroundHeight); // 배경 크기를 넘겨줌
 
     return 0;
